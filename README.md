@@ -29,3 +29,9 @@ Setelah *pipeline* GitHub Actions berjalan sukses, akses panel manajemen melalui
 
 ### 3. Akses Web UI Admin NPM
 Buat username dan password bary
+
+## 👨‍💻 Author & Maintainer
+* **Zakaria** - *Initial Work & Infrastructure Setup*
+
+## 📄 License
+Proyek ini dilisensikan di bawah [MIT License](LICENSE) - silakan digunakan untuk referensi atau pembelajaran pribadi.
