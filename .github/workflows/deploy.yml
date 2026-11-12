@@ -1,0 +1,38 @@
+name: Deploy NPM to VPS
+
+on:
+  push:
+    branches: [ "main" ]
+    paths:
+      - 'npm/**'
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v4
+
+    - name: Set up SSH Key
+      uses: webfactory/ssh-agent@v0.9.0
+      with:
+        ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+
+    - name: Add Remote Host to Known Hosts
+      run: |
+        mkdir -p ~/.ssh
+        ssh-keyscan -H ${{ secrets.VPS_IP }} >> ~/.ssh/known_hosts
+
+    - name: Deploy to VPS via SSH
+      env:
+        VPS_USER: ${{ secrets.VPS_USER }}
+        VPS_IP: ${{ secrets.VPS_IP }}
+      run: |
+        ssh $VPS_USER@$VPS_IP "mkdir -p /opt/vps-stack/npm"
+        scp npm/docker-compose.npm.yml $VPS_USER@$VPS_IP:/opt/vps-stack/npm/
+        ssh $VPS_USER@$VPS_IP << 'EOF'
+          cd /opt/vps-stack/npm
+          docker compose -f docker-compose.npm.yml pull
+          docker compose -f docker-compose.npm.yml up -d --remove-orphans
+        EOF
