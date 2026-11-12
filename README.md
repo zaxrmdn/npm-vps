@@ -16,7 +16,7 @@ Repositori ini mendedikasikan infrastruktur untuk **Nginx Proxy Manager (NPM)** 
 
 ### 1. Prasyarat GitHub Secrets
 Instalasi terlebih dahulu docker di VPS
-https://docs.docker.com/engine/install/
+* https://docs.docker.com/engine/install/
 
 Pastikan *Secrets* berikut sudah dikonfigurasi di menu **Settings > Secrets and variables > Actions** pada repositori GitHub Anda:
 * `SSH_PRIVATE_KEY` : Kunci privat SSH untuk mengakses VPS.
