@@ -1,4 +1,4 @@
-# 🌐 Nginx Proxy Manager (NPM) - GitOps & CI/CD Deployment
+# Nginx Proxy Manager (NPM) - GitOps & CI/CD Deployment
 
 Repositori ini mendedikasikan infrastruktur untuk **Nginx Proxy Manager (NPM)** yang dikelola secara otomatis menggunakan prinsip *GitOps* (infrastruktur sebagai kode) dan **GitHub Actions CI/CD**. Setiap perubahan konfigurasi yang di-*push* ke repositori ini akan langsung diperbarui secara otomatis di server VPS.
 
