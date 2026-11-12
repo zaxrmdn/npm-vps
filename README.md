@@ -4,7 +4,7 @@ Repositori ini mendedikasikan infrastruktur untuk **Nginx Proxy Manager (NPM)** 
 
 ---
 
-## 🏗️ Architecture & Automation Workflow
+## Architecture & Automation Workflow
 
 1. **Version Control:** Berkas konfigurasi `docker-compose.npm.yml` disimpan dan dilacak versinya di GitHub.
 2. **CI/CD Pipeline:** GitHub Actions memicu *workflow* otomatis saat terjadi perubahan pada direktori `npm/` di *branch* `main`.
@@ -12,13 +12,13 @@ Repositori ini mendedikasikan infrastruktur untuk **Nginx Proxy Manager (NPM)** 
 
 ---
 
-## 🚀 Quick Start & Usage
+## Quick Start & Usage
 
-### 1. Prasyarat GitHub Secrets
-Instalasi terlebih dahulu docker di VPS
+### 1. Prasyarat
+A. Instalasi terlebih dahulu docker di VPS
 * https://docs.docker.com/engine/install/
 
-Pastikan *Secrets* berikut sudah dikonfigurasi di menu **Settings > Secrets and variables > Actions** pada repositori GitHub Anda:
+B. Pastikan *Secrets* berikut sudah dikonfigurasi di menu **Settings > Secrets and variables > Actions** pada repositori GitHub Anda:
 * `SSH_PRIVATE_KEY` : Kunci privat SSH untuk mengakses VPS.
 * `VPS_IP` : Alamat IP publik VPS Anda.
 * `VPS_USER` : *Username* VPS (contoh: `root` atau `ubuntu`).
@@ -31,7 +31,7 @@ Setelah *pipeline* GitHub Actions berjalan sukses, akses panel manajemen melalui
 Buat username dan password bary
 
 ## 👨‍💻 Author & Maintainer
-* **Zakaria** - *Initial Work & Infrastructure Setup*
+**Zakaria** 
 
 ## 📄 License
 Proyek ini dilisensikan di bawah [MIT License](LICENSE) - silakan digunakan untuk referensi atau pembelajaran pribadi.
