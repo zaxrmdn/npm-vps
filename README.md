@@ -25,8 +25,7 @@ Pastikan *Secrets* berikut sudah dikonfigurasi di menu **Settings > Secrets and 
 
 ### 2. Akses Web UI Admin NPM
 Setelah *pipeline* GitHub Actions berjalan sukses, akses panel manajemen melalui browser:
-`http://IP-VPS-ANDA:81`
+`http://IP-VPS-ANDA:81` 
 
-* **Default Email:** `admin@example.com`
-* **Default Password:** `changeme` 
-> ⚠️ **Catatan Keamanan:** Segera ubah email dan kata sandi bawaan setelah login pertama kali, serta atur *proxy host* Anda beserta sertifikat SSL Let's Encrypt.
+### 3. Akses Web UI Admin NPM
+Buat username dan password bary
